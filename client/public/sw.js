@@ -11,6 +11,7 @@ const appCachedResources = [
 ];
 
 self.addEventListener('install', event => {
+    self.skipWaiting();
     event.waitUntil(
         caches.open(cacheVersion).then(cache => {
             cache.addAll(appCachedResources);
