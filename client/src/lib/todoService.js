@@ -1,10 +1,6 @@
 export const getTodos = () => {
     return fetch('/todos')
-        .then(res => res.json())
-        .catch(() => {
-            // if fetch fails, fallback to localstorage
-            return JSON.parse(localStorage.getItem('PixelsCampTodoList'));
-        });
+        .then(res => res.json());
 };
 
 export const createTodo = (name) => {
