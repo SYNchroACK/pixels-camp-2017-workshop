@@ -1,0 +1,44 @@
+{
+  "todos": [
+    {
+      "name": "Andre prepares presentation",
+      "isComplete": true,
+      "id": 1
+    },
+    {
+      "name": "Renato prepares workshop",
+      "isComplete": true,
+      "id": 2
+    },
+    {
+      "name": "Andre makes the presentation",
+      "isComplete": true,
+      "id": 3
+    },
+    {
+      "name": "Renato shows the application",
+      "isComplete": false,
+      "id": 4
+    },
+    {
+      "name": "Renato creates the manifest file",
+      "isComplete": false,
+      "id": 5
+    },
+    {
+      "name": "Renato makes the application work offline",
+      "isComplete": false,
+      "id": 6
+    },
+    {
+      "name": "Renato implements push notifications",
+      "isComplete": false,
+      "id": 7
+    },
+    {
+      "name": "Presentation and workshop are finished",
+      "isComplete": false,
+      "id": 8
+    }
+  ]
+}
