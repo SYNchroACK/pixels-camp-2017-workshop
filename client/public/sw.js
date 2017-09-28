@@ -24,3 +24,25 @@ self.addEventListener('fetch', function(event) {
             .then(response => response || fetch(event.request))
     );
 });
+
+self.addEventListener('push', event => {
+    const notification = event.data.json();
+    event.waitUntil(
+        self.registration.showNotification(notification.title, notification)
+    );
+});
+
+self.addEventListener('notificationclick', event => {
+    const { videoUrl } = event.notification.data;
+    switch (event.action) {
+        case 'close':
+            event.notification.close();
+            break;
+        case 'open':
+        default:
+            if (clients.openWindow) {
+                clients.openWindow(videoUrl);
+            }
+            event.notification.close();
+    }
+});
